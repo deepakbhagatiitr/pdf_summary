@@ -12,6 +12,13 @@
 git clone https://github.com/deepakbhagatiitr/pdf_summary.git
 
 ```
+##### make a .env file and add three variable in it 
+
+##### GEMINI_API_KEY= get it
+
+##### MONGO_URI= mongourl either localhost or atlas
+
+##### PORT=5000
 
 Install Dependency
 ```bash
