@@ -3,6 +3,13 @@ const mongoose = require("mongoose");
 const multer = require("multer");
 const dotenv = require("dotenv");
 const fs = require("fs");
+const cors = require("cors");
+const corsOptions = {
+    origin: "*",
+    methods: ['GET', "POST"],
+    allowedHeaders: ['Content-type', 'Authorization']
+}
+app.use(cors(corsOptions));
 const pdf = require("pdf-parse")
 const summarizeText = require("./summarizetext")
 dotenv.config();
