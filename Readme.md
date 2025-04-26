@@ -12,7 +12,8 @@
 git clone https://github.com/deepakbhagatiitr/pdf_summary.git
 
 ```
-##### Make a .env file and add three variable in it 
+
+##### Make a .env file and add three variable in it
 
 ```
 GEMINI_API_KEY= get it
@@ -23,12 +24,14 @@ PORT=5000
 ```
 
 ##### Install Dependency
+
 ```bash
 npm install
 
 ```
 
-#####  Run command
+##### Run command
+
 ```bash
 nodemon
 
@@ -36,32 +39,39 @@ nodemon
 
 ## API Examples(Postman)
 
+##### Paste the below api route and go to the body form-data in key type files choose the file option and in value choose the file from the your PC then press send
 
-#####  Paste the below api route and go to the body form-data in key type files choose the file option and in value choose the file from the your PC then press send
 ```
 (post)https://pdf-summary-b18b.onrender.com/upload-batch
-``` 
+```
 
 ##### Paste the below api route hit the get request
+
 ```
 (get)https://pdf-summary-b18b.onrender.com//batch/:batch_id/status
 ```
 
-#####  Paste the below api route hit the get request
+##### Paste the below api route hit the get request
+
 ```
 (get)https://pdf-summary-b18b.onrender.com//batch/:batch_id/summary
 ```
 
 ## Response Images
+
 ![upload batch.](assets/upload.png)
 ![summary.](assets/summary.png)
 ![status.](assets/status.png)
 ![db cluster.](assets/db.png)
+![files require](assets/files.png)
 
 ## Response Images
 
 ##### for post request on https://pdf-summary-b18b.onrender.com/upload-batch
-
+if less than 3 or more than 5 pdf uploaded
+```
+3-5 files required
+```
 ```
 {
     "batch_id": "batch_1745664537209",
@@ -83,8 +93,8 @@ nodemon
 }
 ```
 
-
 ##### for get request on https://pdf-summary-b18b.onrender.com/batch/batch_1745654790529/summary
+
 ```
 {
     "batch_id": "batch_1745654790529",
@@ -109,16 +119,13 @@ nodemon
 ```
 
 ##### for get request on https://pdf-summary-b18b.onrender.com/batch/batch_1745654790529/status
+
 ```
 {
     "status": "processed"
 }
 ```
 
-
 ## Deployed API
+
 https://pdf-summary-b18b.onrender.com
-
-
-
-
