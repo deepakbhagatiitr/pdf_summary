@@ -4,18 +4,19 @@ const multer = require("multer");
 const dotenv = require("dotenv");
 const fs = require("fs");
 const cors = require("cors");
+const app = express();
+
 const corsOptions = {
     origin: "*",
     methods: ['GET', "POST"],
     allowedHeaders: ['Content-type', 'Authorization']
-}
+};
 app.use(cors(corsOptions));
 const pdf = require("pdf-parse")
 const summarizeText = require("./summarizetext")
 dotenv.config();
 
 
-const app = express();
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
