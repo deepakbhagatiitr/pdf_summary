@@ -6,18 +6,20 @@ const fs = require("fs");
 const cors = require("cors");
 const app = express();
 
+// cors for security
 const corsOptions = {
     origin: "*",
     methods: ['GET', "POST"],
     allowedHeaders: ['Content-type', 'Authorization']
 };
+
 app.use(cors(corsOptions));
 const pdf = require("pdf-parse")
 const summarizeText = require("./summarizetext")
 dotenv.config();
 
 
-
+// To store pdf in the uploads folder and give it original name
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
         cb(null, "uploads/");
@@ -30,6 +32,7 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
+// to connect mongoose atlas
 mongoose
     .connect(process.env.MONGO_URI)
     .then(() => {
@@ -38,10 +41,13 @@ mongoose
     .catch((e) => {
         console.error(e);
     });
+
+//for checking
 app.get("/", (req, res) => {
     res.send("working");
 });
 
+//upload schema
 const uploadSchema = new mongoose.Schema({
     batch_id: {
         type: String
@@ -59,6 +65,8 @@ const uploadSchema = new mongoose.Schema({
     }
 })
 const Upload = mongoose.model('Upload', uploadSchema)
+
+//route to check the status of batch
 app.get("/batch/:batch_id/status", async (req, res) => {
     try {
         const { batch_id } = req.params;
@@ -78,6 +86,7 @@ app.get("/batch/:batch_id/status", async (req, res) => {
 
 });
 
+//route to get the individual and combined insights
 app.get("/batch/:batch_id/summary", async (req, res) => {
     console.log("summary")
     try {
@@ -121,7 +130,7 @@ app.get("/batch/:batch_id/summary", async (req, res) => {
     }
 });
 
-
+// route to upload pdf in uploads folder and also save the metadata to db
 app.post("/upload-batch", upload.array("files", 5), async (req, res) => {
     console.log(req.files);
     try {
@@ -149,6 +158,8 @@ app.post("/upload-batch", upload.array("files", 5), async (req, res) => {
         res.send("something went wrong")
     }
 });
+
+//running on port 5000
 app.listen(process.env.PORT || 5000, () => {
     console.log("server started");
 });

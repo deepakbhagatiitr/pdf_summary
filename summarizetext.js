@@ -5,6 +5,7 @@ dotenv.config();
 // models/gemini-2.0-flash
 const genAi = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
+// function to get the summary using the gemini flash api
 async function summarizeText(text) {
     const model =
         genAi.getGenerativeModel({
