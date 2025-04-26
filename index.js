@@ -139,7 +139,11 @@ app.post("/upload-batch", upload.array("files", 5), async (req, res) => {
             status: 'processing'
         })
         await newUpload.save();
-        res.send("files uploaded successfully");
+        res.json({
+            batch_id: 'batch_' + Date.now(),
+            files: filesData,
+            status: 'processing'
+        });
     }
     catch {
         res.send("something went wrong")
