@@ -14,54 +14,49 @@ git clone https://github.com/deepakbhagatiitr/pdf_summary.git
 ```
 
 Install Dependency
+
 ```bash
 npm install
 
 ```
 
 Run command
+
 ```bash
 nodemon
 
 ```
 
+## API Examples(Postman)
 
-<!-- ## Lists
+Paste the below api route and go to the body form-data
 
-### Unordered
-
-* Item 1
-* Item 2
-* Item 2a
-* Item 2b
-    * Item 3a
-    * Item 3b
-
-### Ordered
-
-1. Item 1
-2. Item 2
-3. Item 3
-    1. Item 3a
-    2. Item 3b
-
-##  -->
-
-## Response Images
-![This is an alt text.](/assets/Screenshot from 2025-04-26 15-47-13.png)
-![This is an alt text.](/assets/Screenshot from 2025-04-26 15-48-50.png)
-![This is an alt text.](/assets/Screenshot from 2025-04-26 15-53-33.png)
-![This is an alt text.](/assets/Screenshot from 2025-04-26 16-01-13.png)
-
-
-## Deployed API
-https://pdf-summary-b18b.onrender.com
-
-
-<!-- ## Blocks of code
+in key type files choose the file option and in value choose the file from the your PC
+then press send
 
 ```
-let message = 'Hello world';
-alert(message);
-``` -->
+(post)https://pdf-summary-b18b.onrender.com/upload-batch
+```
 
+paste the below api route hit the get request
+
+```
+(get)https://pdf-summary-b18b.onrender.com//batch/:batch_id/status
+```
+
+paste the below api route hit the get request
+
+```
+(get)https://pdf-summary-b18b.onrender.com//batch/:batch_id/summary
+```
+
+## Response Images
+
+![This is an alt text.](assets/upload.png)
+![This is an alt text.](assets/summary.png)
+![This is an alt text.](assets/status.png)
+![This is an alt text.](assets/db.png)
+
+## Deployed API
+
+https://pdf-summary-b18b.onrender.com
