@@ -12,21 +12,23 @@
 git clone https://github.com/deepakbhagatiitr/pdf_summary.git
 
 ```
-##### make a .env file and add three variable in it 
+##### Make a .env file and add three variable in it 
 
-##### GEMINI_API_KEY= get it
+```
+GEMINI_API_KEY= get it
 
-##### MONGO_URI= mongourl either localhost or atlas
+MONGO_URI= mongourl either localhost or atlas
 
-##### PORT=5000
+PORT=5000
+```
 
-Install Dependency
+##### Install Dependency
 ```bash
 npm install
 
 ```
 
-Run command
+#####  Run command
 ```bash
 nodemon
 
@@ -35,20 +37,17 @@ nodemon
 ## API Examples(Postman)
 
 
-Paste the below api route and go to the body form-data
-
-in key type files choose the file option and in value choose the file from the your PC
-then press send
+#####  Paste the below api route and go to the body form-data in key type files choose the file option and in value choose the file from the your PC then press send
 ```
 (post)https://pdf-summary-b18b.onrender.com/upload-batch
 ``` 
 
-paste the below api route hit the get request
+##### Paste the below api route hit the get request
 ```
 (get)https://pdf-summary-b18b.onrender.com//batch/:batch_id/status
 ```
 
-paste the below api route hit the get request
+#####  Paste the below api route hit the get request
 ```
 (get)https://pdf-summary-b18b.onrender.com//batch/:batch_id/summary
 ```
@@ -61,7 +60,7 @@ paste the below api route hit the get request
 
 ## Response Images
 
-for post request on https://pdf-summary-b18b.onrender.com/upload-batch
+##### for post request on https://pdf-summary-b18b.onrender.com/upload-batch
 
 ```
 {
@@ -85,7 +84,7 @@ for post request on https://pdf-summary-b18b.onrender.com/upload-batch
 ```
 
 
-for get request on https://pdf-summary-b18b.onrender.com/batch/batch_1745654790529/summary
+##### for get request on https://pdf-summary-b18b.onrender.com/batch/batch_1745654790529/summary
 ```
 {
     "batch_id": "batch_1745654790529",
@@ -109,7 +108,7 @@ for get request on https://pdf-summary-b18b.onrender.com/batch/batch_17456547905
 
 ```
 
-for get request on https://pdf-summary-b18b.onrender.com/batch/batch_1745654790529/status
+##### for get request on https://pdf-summary-b18b.onrender.com/batch/batch_1745654790529/status
 ```
 {
     "status": "processed"
