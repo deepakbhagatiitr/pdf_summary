@@ -48,16 +48,15 @@ nodemon
 ##  -->
 
 ## Response Images
-![This is an alt text.](assets/Screenshot from 2025-04-26 15-47-13.png)
-![This is an alt text.](assets/Screenshot from 2025-04-26 15-48-50.png)
-![This is an alt text.](assets/Screenshot from 2025-04-26 15-53-33.png)
-![This is an alt text.](assets/Screenshot from 2025-04-26 16-01-13.png)
+![This is an alt text.](/assets/Screenshot from 2025-04-26 15-47-13.png)
+![This is an alt text.](/assets/Screenshot from 2025-04-26 15-48-50.png)
+![This is an alt text.](/assets/Screenshot from 2025-04-26 15-53-33.png)
+![This is an alt text.](/assets/Screenshot from 2025-04-26 16-01-13.png)
 
 
 ## Deployed API
 https://pdf-summary-b18b.onrender.com
 
-=
 
 <!-- ## Blocks of code
 
